@@ -142,5 +142,8 @@ flac_clean.play()	# Same method name
 
 print("\nGetting file information:")
 print(mp3_clean.get_info(), "- Duration:", mp3_clean.get_duration())
+print(wav_clean.get_info(), "- Duration:", wav_clean.get_duration())
+print(flac_clean.get_info(), "- Duration:", flac_clean.get_duration())
+
 
 
