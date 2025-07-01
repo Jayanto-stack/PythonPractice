@@ -145,5 +145,28 @@ print(mp3_clean.get_info(), "- Duration:", mp3_clean.get_duration())
 print(wav_clean.get_info(), "- Duration:", wav_clean.get_duration())
 print(flac_clean.get_info(), "- Duration:", flac_clean.get_duration())
 
+print("\nBenefits of abstraction:")
+print("- Same method names (play) for all file types")
+print("- Easy to write generic code")
+print("- Consistent interface")
+
+# Example: Playing all files in a loop (clean)
+print("\nPlaying all files in a loop (clean approach):")
+clean_files = [mp3_clean, wav_clean, flac_clean]
+for file in clean_files:
+	print(f"Now playing: {file.get_info()}")
+	file.play()		# Same method name for all!
+	print(f"Duration: {file.get_duration()}")
+	file.stop()
+	print()
+
+print("^ Much cleaner! No if-else statements needed")
+print()
+
+# Step 4: Advanced example - Music Playlist
+print("STEP 4: Advanced Example - Music Playlist")
+print("-" * 40)
+
+
 
 
