@@ -23,3 +23,21 @@ What this task has given:
 # Where i range is from 0 to X; j range is 0 to Y; k range is 0 to Z
 # But i + j + k != N ; means summ of all three cordinates will not equal to N
 # We can use nested loops here:
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+
+# Nested Loop + filttering with if
+result = [[i, j, k]
+          for i in range(x+1)
+          for j in range(y+1)
+          for k in range(z+1)
+          if i + j + k != n]
+
+print(result)
+
+
+
+
