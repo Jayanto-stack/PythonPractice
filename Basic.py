@@ -1,5 +1,5 @@
 
-# String
+# Variables & String
 """
 name = "jayanto mukhopadhyay"
 print(name.title())
