@@ -1,45 +1,31 @@
+# My first line of python code
+# print("Hello World!")
 
-# Variables & String
-"""
-name = "jayanto mukhopadhyay"
+# Variables
+# car_models = "Mitsubishi"
+# print(car_models)
+
+# String, Integer(3, 4, 5, 6,7), Float(4.5)
+# Chaging Case in String with methods
+name = "avish educom"
 print(name.title())
-# Using title method changing case in a String
-# lower(), Upper()
 print(name.upper())
 print(name.lower())
-"""
+
 # Combining or Concatenating Strings
-"""
 first_name = "jayanto"
 last_name = "mukhopadhyay"
-full_name = first_name + " "+ last_name
+full_name = first_name + " " + last_name
 print(full_name)
-"""
-# Adding whitespace to strings with tabs or newlines
-"""
-print("Python")
-print("\tPython")
-print("Languages:\n\tPython\n\tC\n\tJavascript")
-"""
-favourite_language = 'python '
-favourite_language.rstrip()
-print(favourite_language)
 
-# Integer 
-a = 2
-b = 3
-c = a * b
-print(c)
-
-# Float numbers
-"""
-z = 0.4
-f = 3.5
-x = z + f
-print(x)
-"""
-age = 24
-message = "Happy" +" "+ str(age) + "th Birthday!"
-print(message)
+print("languages:\nPython\nC\nJavascript")
 
 
+
+"""
+Create a variable with school name, put some strings into the variables.
+print using title method.
+
+Create a variable College, course list, Adding a course name, popping any course name.
+
+"""
