@@ -40,14 +40,19 @@ print(popped_bicycle)            # BMW
 last_owned = bicycle.pop()
 print("The last bicycle I owned was a "+ last_owned.title() + ".")
 """
-# f-string ---> You can put expressions inside {}
-guest = ['Ram', 'Shayam', 'raju', 'jagdish']
-print(f"\nSorry, {guest[3].title()} can't make it.")
-guest[3] = "Elon Musk"
+# Organizing a list
+cars = ['bmw', 'audi', 'jaguar', 'toyota', 'subaru']
+cars.sort()
+# print(sorted(cars))        # sorting a list temporarily using the sorted() function
+print(cars)
 
-print(f"Dear {guest[1].title()}, you are invited to dinner.")   # f-string formatted string literal
-print(f"Dear {guest[0].title()}, you are invited to dinner.")
-print(f"Dear {guest[2].title()}, you are invited to dinner.")
-print(f"Dear {guest[3].title()}, you are invited to dinner.")
+# Printing a list in Reverse Order
+cars.reverse()
+print(cars)
+
+# Finding the length of a list
+print(len(cars))
+
+
 
 
