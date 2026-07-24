@@ -1,4 +1,4 @@
-# A list is a collection of items in a particular order.
+# A list is a collection of items in a particular order. Mutable
 """
 bicycle = ['hero', 'redline', 'crossroad', 'BMX']
 print(bicycle)
