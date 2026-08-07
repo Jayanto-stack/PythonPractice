@@ -37,7 +37,7 @@ del alien_0['points']
 print(alien_0)
 """
 # Create a dictionary of different students language learned
-
+"""
 favorite_language = {
     'jen': 'python',
     'sarah': 'c',
@@ -46,7 +46,7 @@ favorite_language = {
 }
 for name, language in favorite_language.items():
     print(name.title() + "'s favorite language is " + language.title() + ".")
-
+"""
 # Looping, for loop
 """
 user_0 = {
@@ -58,4 +58,65 @@ for key, value in user_0.items():
     print("\nkey: " + key)
     print("Value: " + value)
 """
+# A list of Dictionaries
+"""
+alien_0 = {'color': 'green', 'points': 5}
+alien_1 = {'color': 'yellow', 'points': 10}
+alien_2 = {'color': 'black', 'points': 15}
+
+aliens = [alien_0, alien_1, alien_2]
+for alien in aliens:
+    print(alien)
+"""
+# Make an empty list for storing items
+"""
+aliens = []
+
+# Make 30 green aliens
+for alien_number in range(30):
+    new_alien = {'color': 'green', 'points': 5, 'speed': 'slow'}
+    aliens.append(new_alien)
+
+for alien in aliens[0:3]:
+    if alien['color'] == 'green':
+        alien['color'] = 'yellow'
+        alien['speed'] = 'medium'
+        alien['points'] = 10
+    print(alien)
+
+# Show the next 15 aliens
+for alien in aliens[5:15]:
+    print(alien)
+
+# Show how many aliens have been created
+print("Total number of aliens: " + str(len(aliens)))
+"""
+
+# Store information about a pizza being ordered
+"""
+pizza = {
+    'crust': 'thick',
+    'toppings': ['mushrooms', 'extra cheese'],
+}
+# Summarize the order
+print("You have ordered a " + pizza['crust'] + "-crust pizza" + " with the following toppings:")
+
+for topping in pizza['toppings']:
+    print("\t" + topping)
+"""
+
+# Nest list inside a dictionary
+favorite_languages = {
+    'mark': ['python', 'ruby'],
+    'edward': ['c'],
+    'modiji': ['hindi', 'python'],
+    'cjp': ['r', 'go']
+}
+
+for name, languages in favorite_languages.items():
+    print("\n" + name.title() + "'s favorite languages are:")
+    for language in languages:
+        print("\t" + language.title())
+
+
 

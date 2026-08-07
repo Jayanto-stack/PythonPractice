@@ -68,3 +68,20 @@ for marks in students.values():
 
 print("\nTotal Marks:", total)
 
+"""
+Question 3:
+Create a program that stores the marks of 5 subjects in a list:
+1. Use a for loop to calculate the total marks.
+2. Calculate the average.
+3. Use if-elif-else to display the grade:
+Average 		Grade
+90 or above 		A
+75-89 			B
+60-74 			C
+40-59 			D
+Below 40 		F
+
+Expected Output:
+Total Marks: 395
+Average: 79.0
+"""
