@@ -106,6 +106,7 @@ for topping in pizza['toppings']:
 """
 
 # Nest list inside a dictionary
+"""
 favorite_languages = {
     'mark': ['python', 'ruby'],
     'edward': ['c'],
@@ -117,6 +118,50 @@ for name, languages in favorite_languages.items():
     print("\n" + name.title() + "'s favorite languages are:")
     for language in languages:
         print("\t" + language.title())
+"""
+# Looping using key-value pairs
+"""
+user_0 = {
+    'username': 'JSMSec',
+    'first': 'Jayanto',
+    'last': 'Mukhopadhyay'
+}
+for key, value in user_0.items():
+    print("\nKey: " + key)
+    print("Value: " + value)
+"""
+#
+"""
+favourite_languages = {
+    'jayanto': 'python',
+    'chandan': 'java',
+    'rohan': 'c',
+    'shruti': 'ruby'
+}
+for name in sorted(favourite_languages.keys()):
+    print(name.title() + ", thank you for taking the poll.")
+print("The follwoing languages have been mentioned:")
+for language in favourite_languages.values():
+    print(language.title())
+"""
+"""
+Make a dictionary containing three major cities and their rivers:
+    - Use a loop to print a sentence about each river, such as 'The Ganga river is
+        purest river in banaras'.
+    - Use a loop to print the name of each river included in dictionary.
+    - Use a loop to print the name of each cities included in dictionary.
+"""
+rivers_cities = {
+    'banaras': 'ganga',
+    'gujrat': 'narmada',
+    'delhi': 'yamuna',
+    'korba': 'hasdeo'
+}
+for citie, river in rivers_cities.items():
+    print("The " + river.title() + " river is purest river in " + citie.title() + ".")
 
+for river in rivers_cities.values():
+    print(river.title())
 
-
+for citie in rivers_cities.keys():
+    print("\n" + citie.title())
