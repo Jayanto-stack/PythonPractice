@@ -67,6 +67,7 @@ print(s2.name, s2.marks)
 '''
 # Create student class that takes name & marks of 3 subjects as agruments in constructor. Then create a method
 # to print the average.
+'''
 class Student:
     def __init__(self, name, marks):
         self.name = name
@@ -83,3 +84,38 @@ s1.get_avg()
 
 s2 = Student("jay", [70, 55, 39])
 s2.get_avg()
+'''
+'''
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def get_descriptive_name(self):
+        long_name = str(self.year) + ' '+ self.make + ' ' + self.model
+        return long_name.title()
+
+my_new_car = Car('audi', 'a4', 2016)
+print(my_new_car.get_descriptive_name())
+'''
+class Dog():
+    """A simple attempt to model a DOG. """
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def sit(self):
+        print(self.name.title() + " is now sitting.")
+
+    def roll_over(self):
+        print(self.name.title() + " rolled over!")
+
+my_dog = Dog('hunter', 5)
+print("My dog's name is " + my_dog.name.title() + ".")
+print("My dog is "+ str(my_dog.age) + " years old.")
+print(my_dog.sit())
+
+my_second_dog = Dog('bruno', 3)
+print(my_second_dog.roll_over())
