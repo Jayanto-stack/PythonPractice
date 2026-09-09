@@ -43,6 +43,7 @@ print(account.get_balance())
 Create a class Student with a private attribute __marks() that only allows values between 0 and 100
 and a method get_marks() to retrieve it.
 '''
+'''
 class Student:
     def __init__(self, name):
         self.name = name
@@ -62,3 +63,77 @@ s.set_marks(85)
 print(s.get_marks())
 s.set_marks(150)
 print(s.get_marks())        
+'''
+'''
+Abstraction
+Means hiding unnecessary implementation details and showing only what the user need to use.
+'''
+'''
+class Car:
+    def start(self):
+        self.__check_engine()
+        self.__inject_fuel()
+        self.__start_engine()
+        print("Car started")
+
+    def __check_engine(self):
+        print("Checking engine...")
+
+    def __inject_fuel(self):
+        print("Injecting fuel...")
+
+    def __start_engine(self):
+        print("Starting engine...")
+
+car = Car()
+car.start()
+'''
+# abc module = Abstract Base Classes 
+# Payment System
+'''
+from abc import ABC, abstractmethod
+
+class Payment(ABC):
+
+    @abstractmethod
+    def pay(self, amount):
+        pass                # No implementation here -- 
+
+class CreditCardPayment(Payment):
+    def pay(self, amount):
+        print(f"Paid {amount} using Credit Card.")
+
+class UpiPayment(Payment):
+    def pay(self, amount):
+        print(f"Paid {amount} using UPI.")
+
+def checkout(payment_method: Payment, amount):
+    payment_method.pay(amount)
+
+checkout(CreditCardPayment(), 5000)
+checkout(UpiPayment(), 1000)
+'''
+'''
+The checkout() function doesn't need to know the internal logic of each parameter type 
+- it just calls .pay()
+'''
+
+'''
+Create an Employee class by defining employee attributes such as name and salary as an instance
+variable and implementing behavior using work() and show() instance method.
+'''
+class Employee:
+    def __init__(self, name, salary, project):
+        self.name = name
+        self.salary = salary
+        self.project = project
+
+    def show(self):
+        print("Name: ", self.name, "Salary: ", self.salary)
+
+    def work(self):
+        print(self.name, 'is working on', self.project)
+
+emp = Employee('Jayanto', 80000, 'IT')
+emp.show()
+emp.work()
