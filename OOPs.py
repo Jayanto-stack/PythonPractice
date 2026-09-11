@@ -122,6 +122,7 @@ The checkout() function doesn't need to know the internal logic of each paramete
 Create an Employee class by defining employee attributes such as name and salary as an instance
 variable and implementing behavior using work() and show() instance method.
 '''
+'''
 class Employee:
     def __init__(self, name, salary, project):
         self.name = name
@@ -129,7 +130,8 @@ class Employee:
         self.project = project
 
     def show(self):
-        print("Name: ", self.name, "Salary: ", self.salary)
+        print("Name: ", self.name) 
+        print("Salary: ", self.salary)
 
     def work(self):
         print(self.name, 'is working on', self.project)
@@ -137,3 +139,23 @@ class Employee:
 emp = Employee('Jayanto', 80000, 'IT')
 emp.show()
 emp.work()
+'''
+class Mobile:
+    def __init__(self, brand, battery):
+        self.brand = brand
+        self.__battery = battery
+
+    def charge(self, amount):
+         self.__battery = self.__battery + amount
+         if self.__battery > 100:
+              self.__battery = 100
+    def show_battery(self):
+        print("Brand:", self.brand)
+        print("Battery:", self.__battery, "%")
+
+mobile = Mobile("Samsung", 60)
+mobile.show_battery()
+mobile.charge(30)
+mobile.show_battery()
+mobile.charge(50)
+mobile.show_battery()
