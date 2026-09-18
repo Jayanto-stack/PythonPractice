@@ -140,6 +140,7 @@ emp = Employee('Jayanto', 80000, 'IT')
 emp.show()
 emp.work()
 '''
+'''
 class Mobile:
     def __init__(self, brand, battery):
         self.brand = brand
@@ -159,3 +160,64 @@ mobile.charge(30)
 mobile.show_battery()
 mobile.charge(50)
 mobile.show_battery()
+'''
+# Inheritance
+'''
+A class (child/derived class) can axquire the properties and methods of another class (parents/base class), 
+so you don't have to rewrite common logic.
+'''
+'''
+class Animal:
+    def __init__(self, name):
+        self.name = name
+
+    def make_sound(self):
+        pass
+
+class Dog(Animal):
+    def make_sound(self):
+        print("Woof")
+
+class Cat(Animal):
+    def make_sound(self):
+        print("Meow")
+
+dog = Dog("Hunter")
+cat = Cat("Billo")
+
+print("Dog Name:", dog.name)
+print("Sound:", end=" ")
+dog.make_sound()
+print()
+
+print("Cat Name:", cat.name)
+print("Sound:", end=" ")
+cat.make_sound()
+'''
+
+'''
+Create a Python program for a school.
+	• Create a parent class called Person. 
+	• Give it an attribute called name. 
+	• Create a method called introduce() that prints the person's name. 
+	• Create a child class called Student. 
+	• Student should inherit from Person. 
+	• Add a method called study() to the Student class. 
+    - Create a Student object and call both methods.
+'''
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+    def introduce(self):
+        print("My name is", self.name)
+
+class Student(Person):
+
+    def study(self):
+        print(self.name, "is studying.")
+
+student = Student("Jayanto")
+student.introduce()
+student.study()
+
