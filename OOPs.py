@@ -205,6 +205,7 @@ Create a Python program for a school.
 	• Add a method called study() to the Student class. 
     - Create a Student object and call both methods.
 '''
+'''
 class Person:
     def __init__(self, name):
         self.name = name
@@ -220,4 +221,58 @@ class Student(Person):
 student = Student("Jayanto")
 student.introduce()
 student.study()
+'''
+# Polymorphism
+'''
+The same method name behaves differently depending on the object calling it. 
+"Poly" = many
+"morph" = forms
+Think it like starting any object like, start a car, start a computer, start a conversation.
+'''
+'''
+class Animal:
+    def speak(self):
+        raise NotImplementedError("Subclass must implemented")
 
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+class Cow(Animal):
+    def speak(self):
+        return "Moo!"
+
+animals = [Dog(), Cat(), Cow()]
+for animal in animals:
+    print(animal.speak())
+'''
+'''
+Question of Polymorphism:
+Write a function total_cost(items) that works for a list of objects, 
+each having their own .price() method (e.g., Book, Electronics), and returns the total combined price 
+'''
+class Book:
+    def __init__(self, title, price):
+        self.title = title
+        self._price = price
+
+    def price(self):
+        return self._price
+
+class Electronics:
+    def __init__(self, name, price):
+        self.name = name
+        self._price = price
+
+    def price(self):
+        return self._price
+
+def total_cost(items):
+    return sum(item.price() for item in items)
+
+cart = [Book("Python 101", 400), Electronics("Headphones", 800)]
+print(f"Total: {round(total_cost(cart), 2)}")
